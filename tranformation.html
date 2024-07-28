@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEUS-transformation</title>
+    <link rel="stylesheet" href="transforamtion.css"> 
+    <link rel="icon" type="img/png" href="imgs/zeus_icon.png">
+    <script src="transformation.js"></script>
+</head>
+<body>
+<img src="imgs/zeus trainer (1).jpg" alt="">
+<nav class="navbar">
+    <div class="logo">Zeus</div>
+    <ul class="nav-links">
+        <li><a href="C:\Users\mo3az\Desktop\work\my projects\file.html">مين زيوس؟</a></li>
+        <li><a href="C:\Users\mo3az\Desktop\work\my projects\tranformation.html">feedbacks</a></li>
+        <li><a href="C:\Users\mo3az\Desktop\work\my projects\payment.html">الاشتراكات</a></li>
+        <li><a href="C:\Users\mo3az\Desktop\work\my projects\contact_us.html">حسابات زيوس</a></li>
+    </ul>
+
+</nav>
+<div><h1 class="who-is-us" id="zeus">feedbacks</h1></div>
+<style>
+.container {
+    padding: 50px;
+}
+
+.badge {
+    width: 300px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.badge img {
+    width: 500px;
+    height: 500px;
+    border-radius: 0.5cm;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.caption {
+    font-size: 20px;
+    color: #333;
+}
+
+.badge.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="badge">
+    <img src="imgs/feedback 1.jpg" alt="Profile Picture"> 
+</div>
+<div class="badge">
+    <img src="imgs/feedback2.jpg" alt="Profile Picture">
+</div>
+<div class="badge">
+    <img src="imgs/feedback3.jpg" alt="Profile Picture"> 
+</div>
+<div class="badge">
+    <img src="imgs/feedback4.jpg" alt="Profile Picture">    
+</div>
+<div class="badge">
+    <img src="imgs/feedback5.jpg" alt="Profile Picture">
+</div>
+<div class="badge">
+    <img src="imgs/feedback6.jpg" alt="Profile Picture">
+</div>
+<div class="badge">
+    <img src="imgs/feedback7.jpg" alt="Profile Picture">
+</div>
+<div class="badge">
+    <li><a href="C:\Users\mo3az\Desktop\work\my projects\payment.html">الاشتراكات</a></li>
+</div>
+<!-- Add more badges if needed -->
+</div>
+
+<script>
+document.addEventListener("scroll", function() {
+    const badges = document.querySelectorAll(".badge");
+    const triggerBottom = window.innerHeight / 5 * 4;
+
+    badges.forEach(badge => {
+        const badgeTop = badge.getBoundingClientRect().top;
+
+        if (badgeTop < triggerBottom) {
+            badge.classList.add("visible");
+        } else {
+            badge.classList.remove("visible");
+        }
+    });
+});
+</script>
+</section>
+</body>
+</html>
